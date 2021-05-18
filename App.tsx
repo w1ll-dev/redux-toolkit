@@ -1,10 +1,10 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {Routes} from './src/routes';
-import {defaultStore} from './src/store';
+import {toolkitStore} from './src/store';
 
 const App = () => (
-  <Provider store={defaultStore}>
+  <Provider store={toolkitStore}>
     <Routes />
   </Provider>
 );
