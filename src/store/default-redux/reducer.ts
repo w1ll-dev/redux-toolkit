@@ -7,6 +7,6 @@ export function counterReducer(state: number = 0, action: Action) {
     case Actions.DECREMENT:
       return (state -= 1);
     default:
-      return state
+      return state;
   }
 }
