@@ -2,7 +2,11 @@ import React from 'react';
 import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {ToolkitType} from '../store/redux-toolkit';
-import {increment, decrement} from '../store/redux-toolkit/counter-toolkit';
+import {
+  increment,
+  decrement,
+  asyncReset,
+} from '../store/redux-toolkit/counter-toolkit';
 
 export function FirstPage() {
   const {container, row, button, text, title, center} = style;
@@ -26,6 +30,11 @@ export function FirstPage() {
             onPress={() => dispatch(increment())}>
             <Text style={text}>INCREMENT</Text>
           </TouchableOpacity>
+          <TouchableOpacity
+            style={button}
+            onPress={() => dispatch(asyncReset())}>
+            <Text style={text}>ASYNC RESET</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -44,7 +53,9 @@ const style = StyleSheet.create({
     alignItems: 'center',
   },
   row: {
+    justifyContent: 'center',
     flexDirection: 'row',
+    flexWrap: 'wrap',
   },
   text: {
     color: '#fff',
