@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {DefaultRedux, ReduxToolkit} from '../pages';
+import {FirstPage, SecondPage} from '../pages';
 
 const {Navigator, Screen} = createBottomTabNavigator();
 
@@ -9,7 +9,7 @@ export const TabRoutes = () => (
     tabBarOptions={{
       labelPosition: 'beside-icon',
     }}>
-    <Screen name={'Default Redux'} component={DefaultRedux} />
-    <Screen name={'Redux Toolkit'} component={ReduxToolkit} />
+    <Screen name={'First Page'} component={FirstPage} />
+    <Screen name={'Second Page'} component={SecondPage} />
   </Navigator>
 );

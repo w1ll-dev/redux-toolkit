@@ -1,4 +1,4 @@
-import {DefaultRedux} from './DefaultRedux';
-import {ReduxToolkit} from './Toolkit';
+import {FirstPage} from './FirstPage';
+import {SecondPage} from './SecondPage';
 
-export {DefaultRedux, ReduxToolkit};
+export {FirstPage, SecondPage};
